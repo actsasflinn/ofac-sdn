@@ -14,7 +14,7 @@ module OfacSdn
 
     def initialize
       @data_url = 'https://www.treasury.gov/ofac/downloads/sdn.xml'.freeze
-      @xml_path = open(data_url)
+      @xml_path = URI.open(data_url)
     end
 
     def call
